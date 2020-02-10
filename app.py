@@ -16,7 +16,7 @@ def predict_single(img_file):
     probs_list = prediction[2].numpy()
     return {
         'category': classes[prediction[1].item()],
-        'probs': {c: round(float(probs_list[i]), 5) for (i, c) in enumerate(classes)}
+        'probs': {c: round(float(probs_list[i]), 3) for (i, c) in enumerate(classes)}
     }
 
 
